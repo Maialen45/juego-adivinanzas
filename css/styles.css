@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+	display: flex;
+	justify-content: center; /* Centra horizontalmente */
+	align-items: center; /* Centra verticalmente */
+	height: 100vh; /* Altura completa de la ventana */
+	margin: 0; /* Elimina márgenes por defecto */
+	background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: #fff;
+}
+
+/* Contenedor del juego */
+.container {
+	background: rgba(0, 0, 0, 0.3);
+	padding: 30px 40px;
+	border-radius: 15px;
+	box-shadow: 0 0 25px rgba(37, 117, 252, 0.7);
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+}
+/* Animación de aparición */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Título */
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 30px;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Texto introductorio */
+div:first-of-type {
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+	animation: fadeInUp 1s ease forwards;
+	animation-delay: 0.2s;
+}
+
+/* Input número */
+input[type="number"] {
+	width: 100%;
+	padding: 15px 20px;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 30px;
+	box-sizing: border-box;
+	transition: box-shadow 0.3s ease;
+	margin-bottom: 20px;
+	animation: fadeInUp 1.2s ease forwards;
+	animation-delay: 0.4s;
+}
+
+input[type="number"]:focus {
+	outline: none;
+	box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+}
+
+/* Botones */
+button {
+	background: linear-gradient(45deg, #f39c12, #f1c40f);
+	border: none;
+	color: #222;
+	font-weight: 700;
+	padding: 14px 28px;
+	font-size: 1.1rem;
+	margin: 10px 8px;
+	border-radius: 40px;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(241, 196, 15, 0.5);
+	transition: transform 0.2s ease, box-shadow 0.3s ease;
+	animation: fadeInUp 1.4s ease forwards;
+}
+
+button:hover {
+	transform: scale(1.1);
+	box-shadow: 0 6px 15px rgba(241, 196, 15, 0.8);
+}
+
+button:active {
+	transform: scale(0.95);
+	box-shadow: 0 2px 6px rgba(241, 196, 15, 0.6);
+}
+
+/* Contador de intentos */
+#intentos {
+	font-weight: 700;
+	font-size: 1.1rem;
+	margin-top: 25px;
+	color: #ffe066;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	animation: fadeInUp 1.6s ease forwards;
+}
+
+/* Mensajes menor y mayor */
+#menor,
+#mayor {
+	margin-top: 15px;
+	font-size: 1.05rem;
+	font-weight: 600;
+	min-height: 1.4em;
+	opacity: 0;
+	animation: fadeInMessage 0.6s forwards;
+}
+
+#menor {
+	color: #ff4d4d; /* rojo animado */
+}
+
+#mayor {
+	color: #4dff88; /* verde animado */
+}
+
+/* Animación para mensajes */
+@keyframes fadeInMessage {
+	to {
+		opacity: 1;
+	}
+}
