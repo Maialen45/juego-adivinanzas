@@ -18,6 +18,7 @@ function comprobar() {
     if (numero == numeroMisterioso) {
       inputNum.value = "";
       mensajeAlerta("Enhorabuena, has acertado el número");
+      lanzarConfeti();
     } else if (numero > numeroMisterioso) {
       resultadoMenor.textContent = `El número es menor que ${numero}`;
       inputNum.value = "";
@@ -46,6 +47,14 @@ function cont() {
   contador += 1;
   let intentos = document.getElementById("intentos");
   intentos.innerHTML = `Has realizado ${contador} intentos`;
+}
+
+function lanzarConfeti() {
+  confetti({
+    particleCount: 500,
+    spread: 100,
+    origin: { x: 0.5, y: 0.5 },
+  });
 }
 
 document.getElementById("comprobador").addEventListener("click", comprobar);
